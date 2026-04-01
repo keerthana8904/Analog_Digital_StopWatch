@@ -3,76 +3,100 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #1e1e2f, #2b5876);
+    background: linear-gradient(135deg, #ded78e, #71abd2);
 }
 
 
-#container{
+#analogClock{
     font-family: Arial;
     text-align: center;
+    color: #861010;
+    font-size: large;
 }
 
-/* Clock */
 #clock{
+    display: flex;
     position: relative;
     width: 260px;
     height: 260px;
     border-radius: 50%;
-    background: rgba(173, 161, 161, 0.1);
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255,255,255,0.2);
-    box-shadow: 0 0 30px rgba(0,0,0,0.5),
-                inset 0 0 20px rgba(255,255,255,0.1);
+    background: #eaa1db;
+    border: none;
+    box-shadow: 0 0 30px rgba(72, 4, 70, 0.5);
+}  
+
+.number {
+  position: absolute;
+  top: 46%;
+  left: 48%;
+  transform-origin: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
 }
 
-/* Hands */
 .hand {
   position: absolute;
   bottom: 50%;
   left: 50%;
   transform-origin: bottom;
-  transform: translateX(-50%);
   border-radius: 10px;
+  z-index: 1;
 }
 
-/* Hour */
 #hour{
     width: 6px;
     height:60px;
     background: #fff;
 }
 
-/* Minute */
 #minute{
     width: 4px;
     height:90px;
     background:#ffd166;
 }
 
-/* Second */
 #second{
     width: 2px;
     height:110px;
     background:#ef476f;
 }
 
-/* Center Dot */
-#center{
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    background: white;
+.btn { 
+    margin: 20px;
+    margin-top:50px;
+    width: 60px ;
+    height:30px;
     border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
+    border: none;
+    font-weight: 100;
 }
 
-/* Numbers */
-.number {
-    position: absolute;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
+#start{
+    background: #11e622;
+    font-size: medium;
 }
+
+#stop{
+    background: #f84040;
+    font-size: medium;
+}
+
+#start:active{
+    background: #03570a;
+    color: #fff;
+}
+
+#start:hover{
+    box-shadow: 10px -8px 40px 4px  #11e622;;
+}
+
+#stop:active{
+    background: #861010;
+    color: #fff;
+}
+
+ #stop:hover{
+    box-shadow: 10px -8px 40px 4px  #f84040;;
+}
+
