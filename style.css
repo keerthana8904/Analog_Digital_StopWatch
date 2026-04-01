@@ -1,19 +1,33 @@
+html {
+  scroll-behavior: smooth;
+}
 body{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #ded78e, #71abd2);
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 
 #analogClock{
+    background: linear-gradient(135deg, #ded78e, #71abd2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
     font-family: Arial;
     text-align: center;
     color: #861010;
     font-size: large;
 }
 
+h2{
+    font-family: Arial;
+    text-align: center;
+    color: #861010;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
 #clock{
     display: flex;
     position: relative;
@@ -72,31 +86,116 @@ body{
     font-weight: 100;
 }
 
-#start{
+.start{
     background: #11e622;
     font-size: medium;
 }
 
-#stop{
+.stop{
     background: #f84040;
     font-size: medium;
 }
 
-#start:active{
+.reset{
+    background: #aee52c;
+    font-size: medium;
+}
+
+.start:active{
     background: #03570a;
     color: #fff;
 }
 
-#start:hover{
-    box-shadow: 10px -8px 40px 4px  #11e622;;
+.start:hover{
+    box-shadow: 10px -8px 40px 4px  #11e622;
+    cursor:pointer;
 }
 
-#stop:active{
+.reset:active{
+    background: #4a650c;
+    color: white;
+}
+
+.stop:active{
     background: #861010;
     color: #fff;
 }
 
- #stop:hover{
-    box-shadow: 10px -8px 40px 4px  #f84040;;
+ .stop:hover{
+    box-shadow: 10px -8px 40px 4px  #f84040;
+    cursor:pointer;
 }
 
+.reset:hover{
+    box-shadow: 10px -8px 40px 4px  #aee52c;
+    cursor:pointer;
+}
+
+.digiClock{
+    background: linear-gradient(135deg, #e178d9, #9dd0f3);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    position: relative;
+    height: 4em;
+    width: 15em;
+    background: rgb(99, 203, 235);
+    display: flex;              
+    justify-content: center;    
+    align-items: center;        
+    gap: 10px 20px;
+    border-radius: 10px 20px;    
+
+}
+
+.digiHour, .digiMIn, .digiSec{
+    height: 2rem;
+    width: 3rem;
+    background: #0c6d3b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+
+.timer{
+    background: linear-gradient(135deg, #a1fbc6, #d37678);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.timerBox{
+    position: relative;
+    height: 4em;
+    width: 15em;
+    background: rgb(231, 92, 217);
+    display: flex;              
+    justify-content: center;    
+    align-items: center;        
+    gap: 10px 20px;
+    border-radius: 10px 20px; 
+}
+
+.TimerHour , .TimerMIn , .TimerSec{
+    height: 2rem;
+    width: 3rem;
+    background: #27e181;
+    color: white;
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    border-radius: 10px;
+
+}

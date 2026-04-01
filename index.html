@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div id="analogClock">
-      <h1>MY CLOCK</h1>
+    <!-- analog clock -->
+    <section id="analogClock">
+      <h1>CLOCK</h1>
       <div id="clock">
         <div class="hand hourHand" id="hour"></div>
         <div class="hand minuteHand" id="minute"></div>
@@ -16,10 +17,42 @@
       </div>
 
       <div class="startStop">
-        <button class="btn" id="start">Start</button>
-        <button class="btn" id="stop">Stop</button>
+        <button class="btn start" id="start">Start</button>
+        <button class="btn stop" id="stop">Stop</button>
       </div>
-    </div>
+    </section>
+
+    <!-- digital clock -->
+    <section class="digiClock">
+      <h2>DIGITAL CLOCK</h2>
+      <div class="box">
+        <div class="digiHour" id="dHour"></div>
+        <div class="digiMIn" id="dMin"></div>
+        <div class="digiSec" id="dSec"></div>
+      </div>
+
+      <div class="btns">
+        <button type="button" class="btn start" id="DigiStart">Start</button>
+        <button type="button" class="btn stop" id="DigiStop">Stop</button>
+      </div>
+    </section>
+
+    <section class="timer">
+      <h2>STOP WATCH</h2>
+      <div class="timerBox">
+        <div class="TimerHour" id="THour"></div>
+        <div class="TimerMIn" id="TMin"></div>
+        <div class="TimerSec" id="TSec"></div>
+      </div>
+
+      <div class="btns">
+        <button type="button" class="btn start" id="TimerStart">Start</button>
+        <button type="button" class="btn reset" id="TimeReset">Reset</button>
+        <button type="button" class="btn stop" id="TimerStop">Stop</button>
+      </div>
+    </section>
+
+    <div></div>
     <script src="./script.js"></script>
   </body>
 </html>
@@ -27,6 +60,9 @@
 <!-- 
 1.button start n stop (done)
 2. add numbers (done)
-3.digital clock also (pending)
+3.digital clock also (done)
+optional
+
+4. timer
 
  -->
