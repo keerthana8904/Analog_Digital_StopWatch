@@ -17,7 +17,7 @@ for (let i = 1; i <= 12; i++) {
   const num = document.createElement("div");
   num.classList.add("number");
 
-  const angle = i * 30; //angle into hour
+  const angle = i * 30 ; //angle into hour
 
   num.style.transform = `
     rotate(${angle}deg)
@@ -33,6 +33,7 @@ for (let i = 1; i <= 12; i++) {
 
 function currentTime(){
 
+ 
     let now = new Date();
 
     let h = now.getHours();
@@ -47,7 +48,7 @@ function currentTime(){
     console.log(h,m,s)
     console.log(secDeg,minDeg,hourDeg)
 
-     hour.style.transform = `rotate(${hourDeg}deg)`;
+    hour.style.transform = `rotate(${hourDeg}deg)`;
     minute.style.transform = `rotate(${minDeg}deg)`;
     second.style.transform = `rotate(${secDeg}deg)`;
 
@@ -57,6 +58,7 @@ function currentTime(){
 
 let t ;
 function startClock(){
+  
   if(t) return;
     console.log("clicked start")
     currentTime();
@@ -79,7 +81,6 @@ dHour.textContent = `00`;
 dMin.textContent = `00`;
 dSec.textContent = `00`;
 
-
 function format(num){
   return num < 10 ? "0" + num : num;
 }
@@ -88,6 +89,7 @@ function formatHour(num){
    if(num>12){
     num = num%12;
   }
+
   return num < 10 ? "0" + num : num;
 
 }
@@ -174,9 +176,8 @@ spbtn.addEventListener("click", () => {
 
 
 srst.addEventListener("click",()=>{
-
-   clearInterval(interval);   // 🔥 must stop timer
-  interval = null;
+   clearInterval(interval);  
+   interval = null;
 
    seconds= 0;
    minutes =0;
@@ -187,3 +188,5 @@ srst.addEventListener("click",()=>{
     TimerSec.textContent = seconds.toString().padStart(2, "0");
 
 })
+// count down timer
+// inside analog add digital same functionality 
