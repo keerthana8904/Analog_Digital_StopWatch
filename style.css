@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 body{
     margin: 0px;
     padding: 0px;
@@ -19,6 +20,33 @@ body{
     text-align: center;
     color: #861010;
     font-size: large;
+}
+
+.box{
+    position: absolute;
+    z-index: 14;
+    top: 30%;
+    left:50%;
+    height: 1.5em;
+    width: 6em;
+    display: flex;              
+    justify-content: center;    
+    align-items: center;        
+    gap: 1px 5px;
+    border-radius: 10px 10px;    
+
+}
+
+.digiHour, .digiMIn, .digiSec{
+    height: 1.5rem;
+    width: 1.2rem;
+    background: #0c6d3b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    border-radius: 10px;
 }
 
 h2{
@@ -130,41 +158,6 @@ h2{
     box-shadow: 10px -8px 40px 4px  #aee52c;
     cursor:pointer;
 }
-
-.digiClock{
-    background: linear-gradient(135deg, #e178d9, #9dd0f3);
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.box{
-    position: relative;
-    height: 4em;
-    width: 15em;
-    background: rgb(99, 203, 235);
-    display: flex;              
-    justify-content: center;    
-    align-items: center;        
-    gap: 10px 20px;
-    border-radius: 10px 20px;    
-
-}
-
-.digiHour, .digiMIn, .digiSec{
-    height: 2rem;
-    width: 3rem;
-    background: #0c6d3b;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    border-radius: 10px;
-}
-
 .timer{
     background: linear-gradient(135deg, #a1fbc6, #d37678);
     height: 100vh;
@@ -186,7 +179,7 @@ h2{
     border-radius: 10px 20px; 
 }
 
-.TimerHour , .TimerMIn , .TimerSec{
+.TimerHour , .TimerMIn , .TimerSec ,#CHour ,#CMin, #CSec{
     height: 2rem;
     width: 3rem;
     background: #27e181;
@@ -199,3 +192,36 @@ h2{
     border-radius: 10px;
 
 }
+
+.countdown{
+       background: linear-gradient(135deg, #a1fbc6, #d37678);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;; 
+}
+
+
+
+input {
+  width: 60px;
+  padding: 8px;
+
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+
+input:focus {
+  border: 2px solid #ff4d4d;
+  box-shadow: 0 0 8px rgba(255, 77, 77, 0.5);
+}
+
+
+input:hover {
+  border-color: #888;
+}
+

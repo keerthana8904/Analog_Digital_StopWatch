@@ -14,6 +14,11 @@
         <div class="hand hourHand" id="hour"></div>
         <div class="hand minuteHand" id="minute"></div>
         <div class="hand secondHand" id="second"></div>
+        <div class="box">
+          <div class="digiHour" id="dHour"></div>
+          <div class="digiMIn" id="dMin"></div>
+          <div class="digiSec" id="dSec"></div>
+        </div>
       </div>
 
       <div class="startStop">
@@ -22,21 +27,7 @@
       </div>
     </section>
 
-    <!-- digital clock -->
-    <section class="digiClock">
-      <h2>DIGITAL CLOCK</h2>
-      <div class="box">
-        <div class="digiHour" id="dHour"></div>
-        <div class="digiMIn" id="dMin"></div>
-        <div class="digiSec" id="dSec"></div>
-      </div>
-
-      <div class="btns">
-        <button type="button" class="btn start" id="DigiStart">Start</button>
-        <button type="button" class="btn stop" id="DigiStop">Stop</button>
-      </div>
-    </section>
-
+    <!-- stop watch -->
     <section class="timer">
       <h2>STOP WATCH</h2>
       <div class="timerBox">
@@ -52,6 +43,39 @@
       </div>
     </section>
 
+    <!-- COUNTDOWN TIMER -->
+    <section class="countdown">
+      <h2>TIMER</h2>
+
+      <div class="timerBox">
+        <div id="CHour">00</div>
+        <div id="CMin">00</div>
+        <div id="CSec">00</div>
+      </div>
+
+      <div class="btns">
+        <button id="CountdownStart" class="btn start">Start</button>
+        <button id="CountdownStop" class="btn stop">Pause</button>
+        <button id="CountdownReset" class="btn reset">Reset</button>
+      </div>
+
+      <div class="addTimer">
+        <input
+          type="number"
+          id="Hourtimer"
+          placeholder="Hours"
+          min="1"
+          max="12"
+        />
+        <input
+          type="number"
+          id="Mintimer"
+          placeholder="Minutes"
+          min="1"
+          max="60"
+        />
+      </div>
+    </section>
     <div></div>
     <script src="./script.js"></script>
   </body>
