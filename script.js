@@ -3,14 +3,12 @@ let clock = document.getElementById("clock");
 let start = document.getElementById("start");
 let stop = document.getElementById("stop");
 
-// ================= CLOCK (NO CHANGE) =================
-
 //display Numbers on clock
 for (let i = 1; i <= 12; i++) {
   const num = document.createElement("div");
   num.classList.add("number");
 
-  const angle = i * 30;
+  const angle = i * 30; 12*30 // 360deg so 12 @ top
 
   num.style.transform = `
     rotate(${angle}deg)
@@ -111,32 +109,31 @@ function stopWatch() {
   TimerSec.textContent = seconds.toString().padStart(2, "0");
 }
 
-
-
 sbtn.addEventListener("click", () => {
   if (interval) return;
-stopWatch();
+  stopWatch();
   interval = setInterval(stopWatch, 1000);
 });
 
-// PAUSE
+
 spbtn.addEventListener("click", () => {
   clearInterval(interval);
   interval = null;
 });
 
-// RESET
+
 srst.addEventListener("click", () => {
   clearInterval(interval);
   interval = null;
 
+  //reset the variables 
   seconds = 0;
   minutes = 0;
   hours = 0;
 
-  TimerHour.textContent = "00";
-  TimerMIn.textContent = "00";
-  TimerSec.textContent = "00";
+ TimerHour.textContent = hours.toString().padStart(2, "0");
+  TimerMIn.textContent = minutes.toString().padStart(2, "0");
+  TimerSec.textContent = seconds.toString().padStart(2, "0");
 });
 
 
@@ -166,7 +163,7 @@ InHour.addEventListener("input", (e) => {
 });
 
 InMin.addEventListener("input", (e) => {
-  minValue = Number(e.target.value) || 0;
+  minValue = Number(e.target.value) || 5;
 });
 
 function displayTimer() {
@@ -175,7 +172,6 @@ function displayTimer() {
   CMin.textContent = String(minValue).padStart(2, "0");
   CSec.textContent = String(secValue).padStart(2, "0");
 
- 
   if (hourValue === 0 && minValue === 0 && secValue === 0) {
     clearInterval(intervalTimer);
     isRunning = false;
@@ -183,7 +179,6 @@ function displayTimer() {
   }
 
   secValue--;
-
 
   if (secValue < 0) {
     secValue = 59;
@@ -197,11 +192,10 @@ function displayTimer() {
   }
 }
 
-
 CountdownStart.addEventListener("click", () => {
   if (isRunning) return; 
   isRunning = true;
-displayTimer();
+  displayTimer();
   intervalTimer = setInterval(displayTimer, 1000);
 });
 
@@ -214,13 +208,14 @@ CountdownReset.addEventListener("click", () => {
   clearInterval(intervalTimer);
   isRunning = false;
 
+  // reset values
   hourValue = 0;
   minValue = 0;
   secValue = 0;
 
-  CHour.textContent = "00";
-  CMin.textContent = "00";
-  CSec.textContent = "00";
+  CHour.textContent = String(hourValue).padStart(2, "0");
+  CMin.textContent = String(minValue).padStart(2, "0");
+  CSec.textContent = String(secValue).padStart(2, "0");
 
   InHour.value = "";
   InMin.value = "";
